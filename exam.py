@@ -1,14 +1,28 @@
 import urllib.request, json
 
-#from pylatex import Document, Section, Package
-def randQuest(n, filename):
-    #f = ur.urlopen('http://jservice.io/api/random').read().decode('utf-8')
-    file = open(filename, "w+")
-    '''c = 0
+def randQuest():
+    print("Please insert the following information.")
+    filename = input('Filename: ')
+    dateOfTest = input('Date of the test: ')
+    n = input('How many questions do you want to generate? ')
+    n = int(n)
+
+    return questions(filename, n, dateOfTest)
+    
+def questions(filename, n, dateOfTest):
+    file1 = open((filename+'.txt'), 'w+')
+    file2 = open((filename+'Answers.txt'), 'w+')
+    
+    file1.write('Test ' + '\n' + 'Date: ' + dateOfTest + (('\n')*3))
+    c = 0
     while c < n:
         q = urllib.request.urlopen('http://jservice.io/api/random').read().decode('utf-8')
         x = json.loads(q)
-        print('question: ' + x[0]['question'] + ' ---- answer: ' + x[0]['answer'])
-        c += 1'''
-    print('Name: ', file.name)
-
+        if x[0]['question'] != '' and x[0]['answer'] != '':
+            file1.write('Question ' + str(c+1) + ': ' + '\n' + x[0]['question']
+                       + ('\n')*6)
+            file2.write('Question ' + str(c+1) + ': ' + '\n' + x[0]['question']
+                       + '\n' + '---- answer: ' + x[0]['answer'] + (('\n')*6))
+        else:
+            n += 1
+        c += 1
