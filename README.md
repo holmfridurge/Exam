@@ -3,7 +3,9 @@ PYTHON ASSIGNMENT 5, SPRING 2016
 # A program that makes the user generate an exam with random trivia questions and export it
 
 - Authors
+
 Hólmfríður Guðlaug Einarsdóttir
+
 Perla Ósk Hjartardóttir
 
 - Running the script
