@@ -1,7 +1,13 @@
+PYTHON ASSIGNMENT 5, SPRING 2016
 # Exam
 # A program that makes the user generate an exam with random trivia questions and export it
 
-###To be able to run this program the computer needs to have tkinter installed.
+- Authors
+Hólmfríður Guðlaug Einarsdóttir
+Perla Ósk Hjartardóttir
+
+- Running the script
+To be able to run this program the computer needs to have tkinter installed.
 
 
 If 'Generate test' is chosen the user is redirected to a view where he is supposed to insert what the exported file is supposed to be named, the date of the test and how many questions he wants to get.
