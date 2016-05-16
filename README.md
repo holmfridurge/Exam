@@ -4,9 +4,8 @@ PYTHON ASSIGNMENT 5, SPRING 2016
 
 - Authors
 
-Hólmfríður Guðlaug Einarsdóttir
-
-Perla Ósk Hjartardóttir
+--Hólmfríður Guðlaug Einarsdóttir
+--Perla Ósk Hjartardóttir
 
 - Running the script
 To be able to run this program the computer needs to have tkinter installed.
