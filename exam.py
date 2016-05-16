@@ -23,6 +23,21 @@ def questions(filename, n, dateOfTest):
                        + ('\n')*6)
             file2.write('Question ' + str(c+1) + ': ' + '\n' + x[0]['question']
                        + '\n' + '---- answer: ' + x[0]['answer'] + (('\n')*6))
-        else:
-            n += 1
         c += 1
+
+def getQuestion():
+    q = urllib.request.urlopen('http://jservice.io/api/random').read().decode('utf-8')
+    x = json.loads(q)
+    getQuestion.question = x[0]['question']
+    getQuestion.answer = x[0]['answer']
+    print(getQuestion.question + ' ===== ' + getQuestion.answer)
+    return getQuestion.question
+
+def getAnswer():
+    return getQuestion.answer
+
+def getResult(answer, givenAns):
+    if answer.lower() == givenAns.lower():
+        return "True"
+    else:
+        return "False"
