@@ -61,7 +61,7 @@ class GetFile(Frame):
                       font=TITLE_FONT)
         label.grid(row=0, column=0, columnspan=2, padx=20)
 
-        labelName = Label(self, text='Name of file (export destination)')
+        labelName = Label(self, text='Name of file (export destination), do not write the file extension')
         labelDate = Label(self, text='Date of Test')
         labelNum = Label(self, text='Number of questions')
         entryName = Entry(self)
@@ -83,6 +83,7 @@ class GetFile(Frame):
             n = entryNum.get()
             n = int(n)
             questions(filename, n, dateOfTest)
+            controller.show_frame("GetFile")
             
         c = Button(self, text="Generate", command=generateFile)
         c.grid(row=5, column=0, columnspan=2)

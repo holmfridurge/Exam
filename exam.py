@@ -30,7 +30,7 @@ def getQuestion():
     x = json.loads(q)
     getQuestion.question = x[0]['question']
     getQuestion.answer = x[0]['answer']
-    print(getQuestion.question + ' ===== ' + getQuestion.answer)
+    #print(getQuestion.question + ' ===== ' + getQuestion.answer)
     return getQuestion.question
 
 def getAnswer():
